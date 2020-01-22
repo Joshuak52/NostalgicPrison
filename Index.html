@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Nostalgic Prison</title>
+<meta charset="utf-8">
+
+<body>
+    <style type="text/css">
+        body {
+            background-image: url(https://i.imgur.com/MPoUtF5.png);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+
+    <center><img src="https://i.imgur.com/5O780JA.png" alt="Mountain View" style="width:571px;height:234px;"></center>
+	
+<p style="text-align: center;"><button id="copyButton">CLICK TO COPY: Play.NostalgicPrison.Com</button></p>
+<script>
+function copyText(text){
+  function selectElementText(element) {
+    if (document.selection) {
+      var range = document.body.createTextRange();
+      range.moveToElementText(element);
+      range.select();
+    } else if (window.getSelection) {
+      var range = document.createRange();
+      range.selectNode(element);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+    }
+  }
+  var element = document.createElement('DIV');
+  element.textContent = text;
+  document.body.appendChild(element);
+  selectElementText(element);
+  document.execCommand('copy');
+  element.remove();
+}
+
+var btn = document.getElementById('copyButton');
+btn.addEventListener('click', function(){
+  copyText("Play.NostalgicPrison.Com");
+  btn.innerHTML = "Copied!";
+})
+
+
+document.getElementById("copyButton").onmouseover = function() {mouseOver()};
+document.getElementById("copyButton").onmouseout = function() {mouseOut()};
+
+function mouseOver() {
+    document.getElementById("copyButton").innerHTML = "Copy IP";
+}
+
+function mouseOut() {
+    document.getElementById("copyButton").innerHTML = "Play.NostalgicPrison.Com";
+}
+</script>
+
+<style>
+#copyButton {
+    border: none;
+    color: #FFF034;
+    background-color: #666666;
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 25px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 35%;
+}
+
+#copyButton:hover {
+    background-color: #757575;
+    color: white;
+}
+</style>
+</body>
+
+</html>
